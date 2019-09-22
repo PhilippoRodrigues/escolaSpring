@@ -10,7 +10,13 @@
 </head>
 
 <body>
-<h1> Web Application Escola </h1>
+<h1> Escola </h1>
+
+	<br>
+	
+	<h1>Bem vindo ${sessionScope.nome} !</h1>
+	
+	<a href="/">Sair</a>
 	
 	<br>
 	

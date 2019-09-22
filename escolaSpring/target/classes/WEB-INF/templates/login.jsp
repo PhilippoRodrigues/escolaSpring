@@ -18,6 +18,8 @@
         <h1>Login</h1>
         <h2>${mensagem}</h2>
         <form method="post" action="${pageContext.request.contextPath}/usuario/login">
+        	<label>Nome:</label>
+            <input name="nome"/>
             <label>Email:</label>
             <input name="email"/>
             <label>Senha:</label>

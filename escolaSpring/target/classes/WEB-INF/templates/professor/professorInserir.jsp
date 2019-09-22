@@ -9,11 +9,11 @@
 		<label>Nome:</label>
 		<form:input path="nome" />
 	</fieldset>
-	<fieldset>
-		<legend>Informações adicionais</legend>
-		<label>Disciplina:</label>
-		<form:input path="disciplina.nome" />
-	</fieldset>
+<!-- 	<fieldset> -->
+<!-- 		<legend>Informações adicionais</legend> -->
+<!-- 		<label>Disciplina:</label> -->
+<%-- 		<form:input path="disciplina.nome" /> --%>
+<!-- 	</fieldset> -->
 
 	<form:button>Cadastrar</form:button>
 </form:form>

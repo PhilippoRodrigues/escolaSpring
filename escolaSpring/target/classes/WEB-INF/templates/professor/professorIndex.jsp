@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP Page</title>
+<title>Professores</title>
 <script>
 	function remover(mensagem, url) {
 		if (confirm(mensagem)) {
@@ -15,32 +15,25 @@
 </script>
 </head>
 <body>
-	<h2><b>Lista de alunos</b></h2>
+	<h2>
+		<b>Lista de professores</b>
+	</h2>
 	<a href="/">Voltar ao Menu principal</a>
 	<a href="/professor/professorInserir">Inserir novo professor</a>
 
 	<table border>
 		<tr>
-			<th>Nome</th>
-			<th>Disciplina</th>
+			<th>Id</th>
+			<th>Lista de professores</th>
+			<!-- 			<th>Disciplina</th> -->
 		</tr>
 		<c:forEach items="${professores}" var="professor">
 			<tr>
+				<td>${professor.getId()}</td>
 				<td>${professor.getNome()}</td>
-				<td>${professor.getDisciplina().getNome()}</td>
-				<%--                         ${(aluno.getTurma() != null) --%>
-				<%--                           ? aluno.getTurma().getNome() --%>
-				<%--                           : "-" --%>
-				<%--                         } --%>
-				<!--                     </td> -->
-				<!--                     <td> -->
-				<%--                         <a href="/veiculo/porProprietario/${pessoa.getId()}">Veículos</a> --%>
-				<!--                     </td> -->
-				<!-->                    <td> 
-<%--                         <a href="${pageContext.request.contextPath}/veiculo/porProprietario/${pessoa.getId()}">Veículos</a> --%>
-<!--                     </td> -->
-				<td><a
-					href="${pageContext.request.contextPath}/professor/alterarProfessor/${professor.getId()}">Alterar</a>
+				<%-- 				<td>${professor.getDisciplina().getNome()}</td> --%>
+				<td>
+					<%-- href="${pageContext.request.contextPath}/professor/alterarProfessor/${professor.getId()}">Alterar</a> --%>
 					&nbsp; <a href="#"
 					onclick="remover('Deseja Remover?', '${pageContext.request.contextPath}/professor/removerProfessor/${professor.getId()}')">Remover</a>
 				</td>

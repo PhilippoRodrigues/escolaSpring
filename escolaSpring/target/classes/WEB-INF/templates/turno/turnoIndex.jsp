@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>períodos de estudo</title>
+<title>Turnos escolares</title>
 <script>
 	function remover(mensagem, url) {
 		if (confirm(mensagem)) {

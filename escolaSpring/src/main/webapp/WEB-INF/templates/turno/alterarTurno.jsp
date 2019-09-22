@@ -6,7 +6,7 @@
 	modelAttribute="turno">
 	<form:hidden path="id" />
 	<fieldset>
-		<legend>Informações da turno:</legend>
+		<legend>Informações dos turnos:</legend>
 		<label>Nome:</label>
 		<form:input path="periodo" />
 	</fieldset>

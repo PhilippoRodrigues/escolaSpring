@@ -15,11 +15,12 @@ public class UsuarioController {
     public String login(
             @RequestParam("email") String email,
             @RequestParam("senha") String senha,
+            @RequestParam("nome") String nome,
             HttpSession session,
             ModelMap modelMap) {
 
-        if("usuario@usuario.com".equalsIgnoreCase(email) && "usuario".equalsIgnoreCase(senha)){
-            session.setAttribute("email", email);
+        if("u@u.com".equalsIgnoreCase(email) && "u".equalsIgnoreCase(senha)){
+            session.setAttribute("nome", nome);
             
             return "/template/menu";
         }else{

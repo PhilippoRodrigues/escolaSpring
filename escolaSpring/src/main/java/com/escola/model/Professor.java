@@ -1,6 +1,5 @@
 package com.escola.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +14,8 @@ public class Professor {
 	private int id;
 	private String nome;
 	
-	@OneToOne(cascade = {CascadeType.ALL})
+	
+	@OneToOne
 	private Disciplina disciplina;
 	
 	//Construtor 
@@ -28,6 +28,8 @@ public class Professor {
 		this.setNome(nome);
 		this.setDisciplina(disciplina);
 	}
+	
+	//MÉTODOS
 
 	public String getNome() {
 		return nome;
@@ -43,7 +45,6 @@ public class Professor {
 
 	public void setDisciplina(Disciplina disciplina) {
 		this.disciplina = disciplina;
-		disciplina.setProfessor(this);
 	}
 	
 	public int getId() {
@@ -54,11 +55,11 @@ public class Professor {
 		this.id = id;
 	}
 
-	@Override
-	public String toString() {
-		return String.format("Professor(a): %s - Disciplina: %s",
-							this.getNome(),
-							disciplina.getNome());
-	}
+//	@Override
+//	public String toString() {
+//		return String.format("Professor(a): %s - Disciplina: %s",
+//							this.getNome(),
+//							disciplina.getNome());
+//	}
 	
 }

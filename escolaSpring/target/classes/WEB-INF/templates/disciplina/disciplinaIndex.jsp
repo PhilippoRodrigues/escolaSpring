@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP Page</title>
+<title>Disciplinas</title>
 <script>
 	function remover(mensagem, url) {
 		if (confirm(mensagem)) {
@@ -15,7 +15,9 @@
 </script>
 </head>
 <body>
-	<h2><b>Lista de alunos</b></h2>
+	<h2>
+		<b>Relação disciplina-professor</b>
+	</h2>
 	<a href="/">Voltar ao Menu principal</a>
 	<a href="/disciplina/disciplinaInserir">Inserir disciplina</a>
 
@@ -28,14 +30,6 @@
 			<tr>
 				<td>${disciplina.getNome()}</td>
 				<td>${disciplina.getProfessor().getNome()}</td>
-				<%--                         ${(aluno.getTurma() != null) --%>
-				<%--                           ? aluno.getTurma().getNome() --%>
-				<%--                           : "-" --%>
-				<%--                         } --%>
-				<!--                     </td> -->
-				<!--                     <td> -->
-				<%--                         <a href="/veiculo/porProprietario/${pessoa.getId()}">Veículos</a> --%>
-				<!--                     </td> -->
 				<td><a
 					href="${pageContext.request.contextPath}/disciplina/alterarDisciplina/${disciplina.getId()}">Alterar</a>
 					&nbsp; <a href="#"

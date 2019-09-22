@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Aluno {
 
@@ -16,9 +18,9 @@ public class Aluno {
 	
 	private String nome;
 	private String serie; 
-	//private String situacao;
 	private int faltas;
 	
+	@JsonIgnore
 	@ManyToOne(cascade = {CascadeType.ALL})	
 	private Turma turma;
 
@@ -94,36 +96,4 @@ public class Aluno {
 		return "Aluno [id=" + id + ", nome=" + nome + ", serie=" + serie + ", faltas=" + faltas + ", turma=" + turma
 				+ ", periodo=" + turno + "]";
 	}
-	
-//	private float calcularMedia(Disciplina disciplina) {
-//		float soma = 0;
-//		int qtde = 0;
-//		
-//		for(Avaliacao av : this.getAvaliacoes()) {
-//			if(disciplina.equals(av.getDisciplina())){
-//				soma = soma + av.getNota();
-//				qtde++;
-//			}
-//		}
-//		
-//		return soma/qtde;
-//	}
-
-//	public String situacao(Disciplina disciplina) {
-//
-//		if ((this.calcularMedia(disciplina) < 6.0f && this.calcularMedia(disciplina) > 0.0f) && (this.faltas <= 50)) {
-//			return situacao = "Recuperação";
-//
-//		} else if (this.calcularMedia(disciplina) == 0.0f || this.faltas > 50) {
-//			return situacao = "Reprovado";
-//
-//		} else {
-//			return situacao = "Aprovado";
-//		}
-//	}
-//
-//	public String getSituacao() {
-//		return situacao;
-//	}
-	
 }
