@@ -13,7 +13,7 @@
 	<fieldset>
 		<legend>Informações adicionais</legend>
 		<label>Professor:</label>
-		<form:input path="professor.nome" />
+		<form:input path="nome" />
 	</fieldset>
 
 	<form:button>Alterar</form:button>

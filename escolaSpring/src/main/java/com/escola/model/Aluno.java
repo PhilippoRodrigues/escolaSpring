@@ -19,11 +19,12 @@ public class Aluno {
 	private String nome;
 	private String serie; 
 	private int faltas;
-	
+
 	@JsonIgnore
 	@ManyToOne(cascade = {CascadeType.ALL})	
 	private Turma turma;
 
+	@JsonIgnore
 	@ManyToOne(cascade = {CascadeType.ALL})
 	private Turno turno;
 	

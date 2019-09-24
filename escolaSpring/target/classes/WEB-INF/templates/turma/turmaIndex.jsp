@@ -18,7 +18,7 @@
 	<h2>
 		<b>Turmas</b>
 	</h2>
-	<a href="/">Voltar ao Menu principal</a>
+	<a href="/">Sair</a>
 
 	<table border>
 		<tr>

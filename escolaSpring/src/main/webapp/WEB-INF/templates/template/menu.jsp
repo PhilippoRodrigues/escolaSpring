@@ -14,7 +14,7 @@
 
 	<br>
 	
-	<h1>Bem vindo ${sessionScope.nome} !</h1>
+	<h1>Bem-vindo, ${sessionScope.nome} !</h1>
 	
 	<a href="/">Sair</a>
 	

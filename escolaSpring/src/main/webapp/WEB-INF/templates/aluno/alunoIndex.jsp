@@ -16,7 +16,7 @@
 </head>
 <body>
 	<h2><b>Lista de alunos</b></h2>
-	<a href="/">Voltar ao Menu principal</a>
+	<a href="/">Sair</a>
 	<a href="/aluno/alunoInserir">Inserir novo aluno</a>
 
 	<table border>

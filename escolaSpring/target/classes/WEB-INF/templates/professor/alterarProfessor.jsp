@@ -8,12 +8,7 @@
 	<fieldset>
 		<legend>Informações do professor:</legend>
 		<label>Nome:</label>
-		<form:input path="nome" />
-	</fieldset>
-	<fieldset>
-		<legend>Informações adicionais</legend>
-		<label>Disciplina:</label>
-		<form:input path="disciplina.nome" />
+		<form:input path="disciplina.professor.nome" />
 	</fieldset>
 
 	<form:button>Alterar</form:button>

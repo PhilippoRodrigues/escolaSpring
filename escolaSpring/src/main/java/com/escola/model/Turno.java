@@ -17,6 +17,7 @@ public class Turno {
 
 	private String periodo;
 	
+	
 	@OneToMany(mappedBy = "turno")
 	private Set<Aluno> alunos;
 
@@ -50,10 +51,5 @@ public class Turno {
 
 	public void setAluno(Set<Aluno> alunos) {
 		this.alunos = alunos;
-	}
-
-	@Override
-	public String toString() {
-		return "Turno [id=" + id + ", periodo=" + periodo + ", alunos=" + alunos + "]";
 	}
 }

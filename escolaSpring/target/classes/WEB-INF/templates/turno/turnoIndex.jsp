@@ -18,7 +18,7 @@
 	<h2>
 		<b>Turnos</b>
 	</h2>
-	<a href="/">Voltar ao Menu principal</a>
+	<a href="/">Sair</a>
 
 	<table border>
 		<tr>

@@ -18,6 +18,7 @@ public class Turma {
 	
 	private String nome;
 	
+	
 	@OneToMany(mappedBy = "turma")
 	private Set<Aluno> alunos;
 
@@ -56,9 +57,4 @@ public class Turma {
 	public void setAluno(Set<Aluno> alunos) {
 		this.alunos = alunos;
 	}
-
-//	@Override
-//	public String toString() {
-//		return "Turma [id=" + id + ", nome=" + nome + ", alunos=" + alunos + "]";
-//	}
 }

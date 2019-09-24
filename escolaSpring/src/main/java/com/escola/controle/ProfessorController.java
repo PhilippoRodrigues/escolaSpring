@@ -33,50 +33,50 @@ private ProfessorRepository repository;
         return "/professor/professorIndex";
     }
     
-    @RequestMapping("/professor/professorInserir")
-    public String inserir(Model model){
-    	Professor professor = new Professor();
-        model.addAttribute("professor", professor);
-        return "/professor/professorInserir";
-    }
+//    @RequestMapping("/professor/professorInserir")
+//    public String inserir(Model model){
+//    	Professor professor = new Professor();
+//        model.addAttribute("professor", professor);
+//        return "/professor/professorInserir";
+//    }
     
-    @RequestMapping(value = "/professor/inserirAction", method = RequestMethod.POST)
-    public String inserirAction(@ModelAttribute("professor") Professor professor, 
-            BindingResult result,
-            ModelMap model){
-        if(result.hasErrors()){
-            return "error";
-        }
+//    @RequestMapping(value = "/professor/inserirAction", method = RequestMethod.POST)
+//    public String inserirAction(@ModelAttribute("professor") Professor professor, 
+//            BindingResult result,
+//            ModelMap model){
+//        if(result.hasErrors()){
+//            return "error";
+//        }
+//        
+//        this.repository.save(professor);
         
-        this.repository.save(professor);
-        
-        model.addAttribute("professores", this.repository.findAll());
-        model.addAttribute("mensagem", "Salvo com sucesso!");
-        
-        return "/professor/professorIndex";
-    }
+//        model.addAttribute("professores", this.repository.findAll());
+//        model.addAttribute("mensagem", "Salvo com sucesso!");
+//        
+//        return "/professor/professorIndex";
+//    }
 
-    @RequestMapping("/professor/alterarProfessor/{id}")
-	public String alterar(Model model, @PathVariable(value = "id") int id) {
+//    @RequestMapping("/professor/alterarProfessor/{id}")
+//	public String alterar(Model model, @PathVariable(value = "id") int id) {
+//
+//		Optional<Professor> professor = this.repository.findById(id);
+//		model.addAttribute("professor", professor.get());
+//		return "/professor/alterarProfessor";
+//	}
 
-		Optional<Professor> professor = this.repository.findById(id);
-		model.addAttribute("professor", professor.get());
-		return "/professor/alterarProfessor";
-	}
-
-	@RequestMapping(value = "/professor/alterarAction", method = RequestMethod.POST)
-	public String alterarAction(@ModelAttribute("professor") Professor professor, BindingResult result, ModelMap model) {
-
-		if (result.hasErrors()) {
-			return "error";
-		}
-
-		this.repository.save(professor);
-		model.addAttribute("mensagem", "Informação modificada");
-		model.addAttribute("professores", this.repository.findAll());
-		return "/professor/professorIndex";
-
-	}
+//	@RequestMapping(value = "/professor/alterarAction", method = RequestMethod.POST)
+//	public String alterarAction(@ModelAttribute("professor") Professor professor, BindingResult result, ModelMap model) {
+//
+//		if (result.hasErrors()) {
+//			return "error";
+//		}
+//
+//		this.repository.save(professor);
+//		model.addAttribute("mensagem", "Informação modificada");
+//		model.addAttribute("professores", this.repository.findAll());
+//		return "/professor/professorIndex";
+//
+//	}
 
 	@RequestMapping("/professor/removerProfessor/{id}")
 	public String remover(Model model, @PathVariable(value = "id") int id) {

@@ -18,16 +18,18 @@
 	<h2>
 		<b>Relação disciplina-professor</b>
 	</h2>
-	<a href="/">Voltar ao Menu principal</a>
+	<a href="/">Sair</a>
 	<a href="/disciplina/disciplinaInserir">Inserir disciplina</a>
 
 	<table border>
 		<tr>
+			<th>Id</th>
 			<th>Nome</th>
 			<th>Professor</th>
 		</tr>
 		<c:forEach items="${disciplinas}" var="disciplina">
 			<tr>
+				<td>${disciplina.getId()}</td>
 				<td>${disciplina.getNome()}</td>
 				<td>${disciplina.getProfessor().getNome()}</td>
 				<td><a

@@ -18,22 +18,21 @@
 	<h2>
 		<b>Lista de professores</b>
 	</h2>
-	<a href="/">Voltar ao Menu principal</a>
-	<a href="/professor/professorInserir">Inserir novo professor</a>
+	<a href="/">Sair</a>
+	<!-- <a href="/professor/professorInserir">Inserir novo professor</a> -->
 
 	<table border>
 		<tr>
 			<th>Id</th>
-			<th>Lista de professores</th>
-			<!-- 			<th>Disciplina</th> -->
+			<th>Nome</th>
+			<th>Disciplina</th>
 		</tr>
 		<c:forEach items="${professores}" var="professor">
 			<tr>
 				<td>${professor.getId()}</td>
 				<td>${professor.getNome()}</td>
-				<%-- 				<td>${professor.getDisciplina().getNome()}</td> --%>
+				<td>${professor.getDisciplina().getNome()}</td>
 				<td>
-					<%-- href="${pageContext.request.contextPath}/professor/alterarProfessor/${professor.getId()}">Alterar</a> --%>
 					&nbsp; <a href="#"
 					onclick="remover('Deseja Remover?', '${pageContext.request.contextPath}/professor/removerProfessor/${professor.getId()}')">Remover</a>
 				</td>
