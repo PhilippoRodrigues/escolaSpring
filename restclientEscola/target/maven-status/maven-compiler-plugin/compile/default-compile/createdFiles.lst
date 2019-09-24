@@ -1,0 +1,3 @@
+com\mycompany\restclient\Application.class
+com\mycompany\restclient\service\RestService.class
+com\mycompany\restclient\model\Post.class
